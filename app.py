@@ -17,4 +17,10 @@ with col2:
     st.metric("Tempo médio", round(df["time"].mean(), 2))
   
 st.subheader("Pedidos por Funcionário")
-st.bar_chart(df.groupby("name")["qtnd"].sum())
+pedidos_func = df.groupby("name")["qtd"].sum()
+st.bar_chart(pedidos_func
+            )
+regiao = st.selectbox("Selecione a região", df["regiao"].unique())
+
+df_filtrado = df[df["regiao"] == regiao]
+st.dataframe(df_filtrado)
