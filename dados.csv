@@ -1,4 +1,4 @@
-data,nome,região,quantidade,tempo
+dt,name,regiao,qtnd,time
 2026-01-01,João,SP,50,30
 2026-01-01,Maria,SP,60,25
 2026-01-02,Carlos,SP,40,35
